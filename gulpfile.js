@@ -75,11 +75,15 @@ var autoprefixer = require('autoprefixer'),
   csswring = require('csswring'),
   cssnext = require('cssnext');
 
-// Copy web fonts to dist
-gulp.task('fonts', function () {
-  return gulp.src(paths.fonts.src)
-    .pipe(plugins.newer(paths.fonts.dest))
-    .pipe(gulp.dest(paths.fonts.dest))
+
+gulp.task('fonts', function() {
+  return gulp.src(paths.fonts.src + '/*.ttf')
+    .pipe(plugins.cssfont64())
+    .pipe(plugins.rename({
+      prefix: "_",
+      extname: ".scss"
+    }))
+    .pipe(gulp.dest(paths.styles.src + 'fonts/base64/'))
     .pipe(plugins.size({showFiles: true, title: 'task:fonts'}));
 });
 

@@ -1,7 +1,13 @@
 // Font Sizes
-$base-font-size: 16px;
+$fhncroman: helveticaneue-cyr-roman-webfont;
+$fhnclight: helveticaneue-cyr-light-webfont;
+$fhncmedium: helveticaneue-medium-webfont;
+$fhncbold: helveticaneue-cyr-bold-webfont;
+$fhncblack: helveticaneue-black-webfont;
+
+$base-font-size: 18px;
 $em-base: $base-font-size;
-$base-font-family: 'Roboto', sans-serif;
+$base-font-family: $fhnclight, sans-serif;
 $heading-font-family: $base-font-family;
 
 // font weight

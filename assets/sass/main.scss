@@ -5,9 +5,6 @@
 @import 'import/lists';
 @import 'import/tables';
 @import 'import/mixin';
-@import 'import/wordpress';
-@import 'grid/bootstrap';
-@import 'grid/bootstrap-theme';
 @import 'sprite';
 
 body {
@@ -94,10 +91,19 @@ picture {
 */
 
 header {
-  background-color: $light-gray;
+  height: 900px;
+
+  background-color: #fff;
+  background-image: url(../img/bg/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  .inner-first {
+    height: 180px;
+  }
   .logo {
     position: absolute;
-    top: 102px;
+    top: 38px;
     left: 0;
 
     display: block;
@@ -108,24 +114,169 @@ header {
       max-width: 100%;
     }
   }
+  .header-select {
+    position: absolute;
+    top: 20px;
+    left: 360px;
+
+    width: 365px;
+  }
+  .phone-block,
+  .social-block {
+    position: absolute;
+    right: 0;
+
+    width: 260px;
+  }
+  .phone-block {
+    top: 15px;
+  }
+  .social-block {
+    top: 75px;
+  }
+  .head-title-block {
+    height: 222px;
+
+    text-align: center;
+
+    background-image: url(../img/bg/head-title-block.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .header-prop-block {
+    @extend .clearfix;
+    .header-prop-items {
+      position: relative;
+
+      float: left;
+
+      width: 25%;
+      padding: 175px 35px 0 0;
+      &:before {
+        @extend .dblock;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+      }
+    }
+    .header-prop-item-1 {
+      &:before {
+        @include sprite($sprite-header-prop-item-1);
+      }
+    }
+    .header-prop-item-2 {
+      &:before {
+        @include sprite($sprite-header-prop-item-2);
+      }
+    }
+    .header-prop-item-3 {
+      &:before {
+        @include sprite($sprite-header-prop-item-3);
+      }
+    }
+    .header-prop-item-4 {
+      &:before {
+        @include sprite($sprite-header-prop-item-4);
+      }
+    }
+  }
 }
 .nav {
+  position: relative;
+
   height: 64px;
 
   border-top: 1px solid $gray;
   border-bottom: 1px solid $gray;
   background-color: $blue;
-  ul {
+  .headnav {
     width: $width;
     margin: 0 auto;
+    padding: 0;
+
     @extend .justify-child;
     @extend .clearfix;
-    li {
+    > li {
       display: inline-block;
+
+      padding: 20px;
+
+      background-image: url(../img/bg/nav-li.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      &:last-child {
+        width: 180px;
+
+        background-image: none;
+      }
+      a {
+        font-family: $fhncroman;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: #fff;
+        &:hover {
+          color: darken(#fff, 100%);
+        }
+      }
+    }
+    .lang-selector {
+      width: 145px;
+
+      @extend .justify-child;
+      @extend .clearfix;
+      li {
+        display: inline-block;
+
+        width: 39px;
+        height: 25px;
+
+        border: 1px solid $gray;
+        a {
+          display: block;
+
+          width: 100%;
+          height: 100%;
+
+          opacity: .8;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+      .lang-ru {
+        a {
+          @include sprite($sprite-lang-ru);
+        }
+      }
+      .lang-en {
+        a {
+          @include sprite($sprite-lang-en);
+        }
+      }
+      .lang-he {
+        a {
+          @include sprite($sprite-lang-he);
+        }
+      }
     }
   }
-  .headnav {
-    width: $width / 5;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 611px;
+    height: 61px;
+
+    content: '';
+
+    background-image: url(../img/bg/nav.png);
+    background-repeat: no-repeat;
+
+    @extend .dblock;
   }
 }
 
@@ -168,5 +319,10 @@ footer {
 */
 
 
+@import 'fonts/base64/helveticaneue-black-webfont';
+@import 'fonts/base64/helveticaneue-cyr-bold-webfont';
+@import 'fonts/base64/helveticaneue-cyr-light-webfont';
+@import 'fonts/base64/helveticaneue-cyr-roman-webfont';
+@import 'fonts/base64/helveticaneue-medium-webfont';
 @import 'base64';
 @import 'import/print';
