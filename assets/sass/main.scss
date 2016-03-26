@@ -87,19 +87,37 @@ picture {
   @extend .clearfix;
 }
 
+/*
+  ****
+  HEADER
+  ****
+*/
+
 header {
   background-color: $light-gray;
   .logo {
+    position: absolute;
+    top: 102px;
+    left: 0;
+
     display: block;
 
-    width: $width / 10;
+    width: 320px;
+    height: 78px;
     img {
       max-width: 100%;
     }
   }
 }
-nav {
+.nav {
+  height: 64px;
+
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  background-color: $blue;
   ul {
+    width: $width;
+    margin: 0 auto;
     @extend .justify-child;
     @extend .clearfix;
     li {
@@ -111,6 +129,12 @@ nav {
   }
 }
 
+/*
+  ****
+  CONTENT
+  ****
+*/
+
 section {
   padding: 0 0 $footer;
 }
@@ -121,6 +145,11 @@ article {
   @extend .clearfix;
 }
 
+/*
+  ****
+  FOOTER
+  ****
+*/
 
 footer {
   height: $footer;
@@ -132,8 +161,12 @@ footer {
   }
 }
 
+/*
+  ****
+  IUNCLUDES
+  ****
+*/
 
-@import 'fonts/font_fontawesome';
-@import 'fonts/font_roboto';
+
 @import 'base64';
 @import 'import/print';
