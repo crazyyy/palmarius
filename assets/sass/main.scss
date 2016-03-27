@@ -151,13 +151,63 @@ header {
       float: left;
 
       width: 25%;
-      padding: 175px 35px 0 0;
+      padding: 175px 20px 0 0;
+      h5 {
+        font-family: $fhncmedium;
+
+        position: relative;
+
+        margin: 0 0 30px;
+
+        text-align: center;
+        text-transform: uppercase;
+        &:after {
+          position: absolute;
+          right: 100px;
+          bottom: -20px;
+          left: 50px;
+
+          height: 1px;
+
+          content: '';
+
+          background-color: $green;
+
+          @extend .dblock;
+        }
+      }
+      ul {
+        padding: 0;
+        padding: 0;
+        li {
+          position: relative;
+
+          margin: 0 0 10px;
+          padding: 0 0 0 20px;
+          font-size: 16px;
+          &:before {
+            position: absolute;
+            top: 5px;
+            left: 0;
+
+            content: '';
+
+            @extend .dblock;
+            @include sprite($sprite-ico-checked);
+          }
+          span {
+            font-family: $fhncbold;
+          }
+        }
+      }
       &:before {
-        @extend .dblock;
         position: absolute;
         top: 0;
         left: 0;
+
         content: '';
+
+        @extend .dblock;
       }
     }
     .header-prop-item-1 {
