@@ -4,14 +4,14 @@ input[type='button'],
 input[type='reset'],
 input[type='submit'],
 button {
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-family: $fhncblack;
+  font-size: 21px;
   font-weight: 600;
   line-height: 1;
 
   display: inline-block;
 
-  padding: .75em 1em;
+  padding: 12px 0;
 
   cursor: pointer;
   user-select: none;
@@ -19,24 +19,84 @@ button {
   vertical-align: middle;
   white-space: nowrap;
   text-decoration: none;
+  text-transform: uppercase;
 
+  opacity: .95;
   color: #fff;
   border: none;
-  border-radius: $base-border-radius;
+  border-radius: 0;
+  outline: none;
   background-color: $action-color;
 
   -webkit-font-smoothing: antialiased;
   &:hover,
   &:focus {
+    opacity: 1;
     color: #fff;
-    background-color: darken($action-color, 15%);
+    // background-color: darken($action-color, 15%);
   }
   &:active {
-    color: lighten($action-color, 15%);
+    outline: none;
+    // color: lighten($action-color, 15%);
   }
   &:disabled {
     cursor: not-allowed;
 
     opacity: .5;
+  }
+}
+.btn-orange,
+.btn-green {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  &:hover {
+    background-color: transparent;
+  }
+}
+.btn-orange {
+  @include sprite($sprite-btn-orange);
+}
+.btn-leave-order {
+  @include sprite($sprite-btn-leave-order);
+}
+.btn-orange-more {
+  padding-top: 6px;
+
+  @include sprite($sprite-btn-orange-more);
+}
+.btn-green {
+  padding-left: 30px;
+
+  @include sprite($sprite-btn-green);
+}
+.input-calendar {
+  position: relative;
+
+  padding: 0;
+
+  cursor: pointer;
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+
+    margin-top: -18px;
+
+    @extend .dblock;
+    @include sprite($sprite-ico-calendar-blue);
+  }
+}
+.input-calendar {
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+  input::-webkit-inner-spin-button,
+  input::-webkit-calendar-picker-indicator {
+    display: none;
+
+    -webkit-appearance: none;
   }
 }

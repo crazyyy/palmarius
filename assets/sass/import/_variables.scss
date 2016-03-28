@@ -4,6 +4,7 @@ $fhnclight: helveticaneue-cyr-light-webfont;
 $fhncmedium: helveticaneue-medium-webfont;
 $fhncbold: helveticaneue-cyr-bold-webfont;
 $fhncblack: helveticaneue-black-webfont;
+$ftahoma: Tahoma, Verdana, Segoe, sans-serif;
 
 $base-font-size: 18px;
 $em-base: $base-font-size;
@@ -35,14 +36,15 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$orange: orange;
+$orange: #fbd472;
 $red: red;
 $blue: #5089b1;
-$green: #42dc1a;
+$green: #5ab643;
 $gray: #b5b8be;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$dark-gray: #919191;
+$medium-gray: #505050;
+$light-gray: #626262;
+$vlite-gray: #efeeee;
 
 // Font Colors
 $base-font-color: $dark-gray;
