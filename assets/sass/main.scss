@@ -1257,6 +1257,54 @@ article {
       right: 0;
     }
   }
+  .last-artinews-item {
+    line-height: 1;
+
+    float: left;
+
+    width: 33.33%;
+    height: 135px;
+    margin-bottom: 50px;
+    padding: 15px 15px;
+
+    border-right: 1px solid $gray;
+    .date,
+    .read-more {
+      font-size: 14px;
+    }
+    .date {
+      color: $red;
+    }
+    .read-more {
+      position: relative;
+
+      float: right;
+
+      margin-right: 40px;
+
+      text-decoration: underline;
+
+      color: $blue;
+      &:after {
+        position: absolute;
+        top: 0;
+        right: -20px;
+
+        content: '  >>';
+      }
+    }
+    &:last-child {
+      border-right: 0;
+    }
+    img {
+      float: left;
+
+      margin-right: 10px;
+
+      border: 1px solid $gray;
+      border-radius: 3px;
+    }
+  }
 }
 
 
