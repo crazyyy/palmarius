@@ -64,10 +64,20 @@ button {
 
   @include sprite($sprite-btn-orange-more);
 }
+.btn-orange-arrow {
+  @include sprite($sprite-btn-orange-arrow);
+}
 .btn-green {
   padding-left: 30px;
 
   @include sprite($sprite-btn-green);
+}
+.btn-small-green {
+  font-size: 18px;
+
+  padding: 0 0 0 30px;
+
+  @include sprite($sprite-btn-small-green);
 }
 .input-calendar {
   position: relative;
